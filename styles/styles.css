@@ -235,13 +235,13 @@ button{
 
 
 .main-right{
-  max-width: 700px;
- 
+  
+  gap: 46px;
   
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap:46px ;
+  
   
   
   
@@ -252,24 +252,28 @@ button{
 
 }
 .cvet{
+  display: flex;
   max-width:80px ;
   max-height: 91px;
  
    
 }
 .cvet-1{
+  display: flex;
   max-width:114px ;
   max-height: 87px;
  
    
 }
 .cvet-2{
+  display: flex;
   max-width:100px ;
   max-height: 87px;
  
    
 }
 .cvet-3{
+  display: flex;
   max-width:86px ;
   max-height: 87px;
  
@@ -338,19 +342,20 @@ button{
 .zub-inner{
   align-items: center;
   display: flex;
-  width:400px ;
-  height: 100px;
+  max-width :318px ;
+  max-height: 100px;
+  margin-right:33px ;
 }
 .active{
   display: flex;
   width: 300px;
   align-items: center;
 }
-.zub-inner-2{
+.zub-iiner-2{
   align-items: center;
   display: flex;
-  width:400px ;
-  height: 100px;
+  max-width:212px ;
+  max-height: 100px;
 }
 .top-zub-inner{
   display: flex;
@@ -361,9 +366,9 @@ button{
 .bottom-zub-inner{
   display: flex;
   align-items: center;
-  width:400px ;
-  height: 100px;
-  justify-content: flex-start;
+  max-width:400px ;
+  max-height: 100px;
+  
   
   
 }
@@ -789,18 +794,104 @@ li{
   right: 10px;
 }
 
-#yandex-map{
-  margin-bottom: 32px;
-  width: 1400px;
+#map{
+  
+  width: 100%;
   height: 584px;
-  border-radius: 20px 20px 20px 20px;
+  margin-bottom:23px ;
+  border-radius: 20px;
+  overflow: hidden;
+  
 }
-.rassrochka{
+.rusrochcka{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height:584px ;
+  background-color:#BDB295 ;
+  border-radius: 20px 20px 20px 20px;
   margin-bottom: 32px;
+}
+.oformit{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height:53px ;
+  background-color:#E8E2CF ;
+  border-radius: 0px 0px 20px 20px;
+  margin-bottom: 32px;
+  top: 91%;
+  align-items: center;
+  justify-content: center;
+
+}
+.oformit-text{
+  display: flex;
+  position: absolute;
+  
+  
+  
+  font-family:'SF-Pro Display';
+  font-size: 20px;
+
+}
+.inside-text{
+  display: flex;
+  
+  
+  position: absolute;
+  left: 12%;
+  top: 11%;
+
+  
+  
+  
+  
+  font-family:'SF-Pro Display';
+  font-size: 60px;
+
+}
+.tubica{
+  position: absolute;
+  display: flex;
+  left: 12%;
+  top: 35%;
+
+}
+.inside-text-2{
+  display: flex;
+  max-width: 573px;
+  max-height: 82px;
+  
+  
+  position: absolute;
+  left: 12%;
+  top: 70%;
+
+  
+  
+  
+  
+  font-family:'SF-Pro Display-light';
+  font-size: 28px;
+
+}
+.inside-text-3{
+  position: absolute;
+  display: flex;
+  font-family: 'SF-Pro Display-Medium';
+  font-size: 364px;
+  right: 5%;
+  top: -10%;
+  
+  max-height: 415px;
+  color: white;
+
 }
 .kval{
   margin-bottom: 177px;
 }
+
 
 
 
@@ -950,6 +1041,9 @@ li{
 
 
 @media(max-width:480px){
+  .container{
+    padding: 0 16px;
+  }
   .main{
     
     padding-top: 0; 
@@ -963,7 +1057,8 @@ li{
     
   }
   .top-header{
-    padding:  29px  17px; 
+    padding-top:  1px  ; 
+    margin-bottom: 29px;
     
   }
   .logo{
@@ -1039,6 +1134,7 @@ li{
   .top-zub-inner{
     justify-content: space-between;
     margin-right: 0;
+    margin-bottom: 0;
     max-width: 300px;
   }
   .bottom-zub-inner{
@@ -1050,6 +1146,7 @@ li{
   }
   .main-left {
     max-width:450px ;
+    height:57px ;
     
     flex-direction: row;
     
@@ -1058,6 +1155,7 @@ li{
     
     font-family: 'SF-Pro Display-light';
     justify-content: space-between;
+    margin-bottom:30px ;
     
     
     
@@ -1087,10 +1185,14 @@ li{
     
     
     justify-content: space-between;
+    margin-bottom: 30px;
+    
     
   }
-  .slider-container{
-    width: 360px;
+  .slider{
+   
+    
+    border-radius: 40px;
   }
   .btn-main{
     
@@ -1115,18 +1217,101 @@ li{
     top: 50%;
     right: 10px;
   }
-  .rassrochka{
-    max-width: 360px;
-    max-height: 224px;
+  .oformit-text{
+    display: flex;
+    position: absolute;
     
+    
+    
+    font-family:'SF-Pro Display';
+    font-size: 20px;
+  
   }
-  #yandex-map{
-    width: 360px;
-    height:265px ;
+  .rusrochcka{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height:290px ;
+  background-color:#BDB295 ;
+  border-radius: 40px 40px 20px 20px;
+  margin-bottom: 32px;
+
+  }
+  .inside-text{
+    display: flex;
+    
+    
+    position: absolute;
+    left: 3%;
+    top: 5%;
+  
+    
+    
+    
+    
+    font-family:'SF-Pro Display';
+    font-size: 34px;
+  
+  }
+  .tubica{
+    position: absolute;
+    display: flex;
+    max-width: 107px;
+    left: 6%;
+    top: 40%;
+  
+  }
+  .inside-text-2{
+    display: flex;
+    max-width: 323px;
+    max-height: 82px;
+    
+    
+    position: absolute;
+    left: 3%;
+    top: 65%;
+  
+    
+    
+    
+    
+    font-family:'SF-Pro Display-light';
+    font-size: 20px;
+  
+  }
+  .inside-text-3{
+    position: absolute;
+    display: flex;
+    font-family: 'SF-Pro Display-Medium';
+    font-size: 180px;
+    right: 5%;
+    top: -10%;
+    
+    max-height: 215px;
+    color: white;
+  
+  }
+  .oformit{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height:53px ;
+  background-color:#E8E2CF ;
+  border-radius: 0px 0px 40px 40px;
+  margin-bottom: 32px;
+  top: 91%;
+  align-items: center;
+  justify-content: center;
+
+  }
+  #map{
+    border-radius: 40px;
+    overflow: hidden;
+    height: 343px; ;
   }
 }
 
-@media(max-width:420px){
+@media(max-width:440px){
   .main-right{
     padding-left: 0;
     gap: 40px;
@@ -1137,13 +1322,26 @@ li{
     justify-content: space-between;
     
   }
+  .zub-inner{
+    margin-right:20px ;
+
+  }
+  .zub{
+    margin-right: 5px;
+  }
+  .otbel{
+    font-size:16px ;
+  }
+  .zub{
+
+  }
   
 
 
 }
 @media(max-width:390px){
   .main-right{
-    padding-left: 0;
+    
     gap: 20px;
     
     
@@ -1152,20 +1350,28 @@ li{
     justify-content: space-between;
     
   }
+  .zub-inner{
+    margin-right:14px ;
+
+  }
+  .zub{
+    margin-right: 5px;
+  }
+  .otbel{
+    font-size:16px ;
+  }
+
 
 
 }
-
-
-
-  
-
- 
-
-@media(max-width:360px){
+@media(max-width:375px){
+  .container{
+    padding: 0 7px;
+  }
   .main{
+    max-width: 345px;
     
-    padding-top: 32px; 
+    padding-top:0; 
     display: flex;
     flex-direction:column-reverse;
     
@@ -1176,7 +1382,9 @@ li{
     
   }
   .top-header{
-    padding:  24px  8px; 
+    padding-top:  2px; 
+    padding-bottom: 23px;
+    margin-bottom: 0;
     
   }
   .logo{
@@ -1235,30 +1443,34 @@ li{
     font-size: 16px;
   }
   .zub-inner{
-    max-width: 124px;
+    width: 124px;
+    
+    
     margin-right:21px ;
 
 
   }
   .zub-iiner-2{
-    width: 87px;
+    max-width: 87px;
     
 
 
   }
   .top-zub-inner{
+    justify-content: flex-start;
     justify-content: space-between;
     margin-right: 0;
     max-width: 300px;
   }
   .bottom-zub-inner{
-    width:91px ;
-    height:87px ;
+    max-width:91px ;
+    max-height:87px ;
   }
   .active{
     max-width:75px
   }
   .main-left {
+    width:345px ;
     
     flex-direction: row;
     
@@ -1289,7 +1501,7 @@ li{
 
   }
   .main-right{
-    padding-left: 0;
+    
     gap: 40px;
     
     
@@ -1332,6 +1544,195 @@ li{
   #yandex-map{
     width: 360px;
     height:265px ;
+  }
+
+}
+
+
+
+  
+
+ 
+
+@media(max-width:360px){
+  .container{
+    padding: 0 7px;
+  }
+  .main{
+    max-width: 345px;
+    
+    padding-top:0; 
+    display: flex;
+    flex-direction:column-reverse;
+    
+    
+    
+    align-items: center;
+    margin-bottom: 0px;
+    
+  }
+  .top-header{
+    padding-top:  2px; 
+    padding-bottom: 23px;
+    margin-bottom: 0;
+    
+  }
+  .logo{
+    width: 140px;
+    height: 24px;
+
+  }
+  .menu{
+    width: 24px;
+    height: 24px;
+    
+  }
+  
+  .menu-nav{
+    width: 24px;
+  }
+  .menu-btn-svg{
+    width: 24px;
+    height: 24px;
+
+  }
+  .ava{
+    width: 32px;
+    height: 32px;
+    
+  }
+  .cvet{
+    max-width:47px ;
+    max-height: 53px;
+  }
+  .cvet-1{
+    max-width:68px ;
+    max-height: 51px;
+
+  }
+  .cvet-2{
+    max-width:59px ;
+    max-height: 51px;
+    
+  }
+  .cvet-3{
+    max-width:51px ;
+    max-height: 51px;
+    
+  }
+  
+  
+  .zub{
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 5px;
+
+  }
+  .otbel{
+    font-family: 'SF-Pro Display-light';
+    font-size: 16px;
+  }
+  .zub-inner{
+    width: 124px;
+    
+    
+    margin-right:21px ;
+
+
+  }
+  .zub-iiner-2{
+    max-width: 87px;
+    
+
+
+  }
+  .top-zub-inner{
+    justify-content: flex-start;
+    justify-content: space-between;
+    margin-right: 0;
+    max-width: 300px;
+  }
+  .bottom-zub-inner{
+    max-width:91px ;
+    max-height:87px ;
+  }
+  .active{
+    max-width:75px
+  }
+  .main-left {
+    width:345px ;
+    
+    flex-direction: row;
+    
+    
+    
+    
+    font-family: 'SF-Pro Display-light';
+    justify-content: space-between;
+    
+    
+    
+  }
+  
+  .text{
+
+    padding-top: -10px;
+    line-height: 50px;
+  }
+  .cnopka{
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+  }
+  .cnopka-2{
+    width: 24px;
+    height: 24px;
+   
+
+  }
+  .main-right{
+    
+    gap: 40px;
+    
+    
+    
+    
+    justify-content: space-between;
+    
+  }
+  .slider-container{
+    width: 360px;
+  }
+  .btn-main{
+    
+    
+    padding-top: 32px; 
+    display: flex;
+    
+    
+    
+    align-items: center;
+    margin-bottom: 27px;
+    justify-content: space-between;
+    
+  }
+  .prev {
+    left: 10px;
+    top: 50%;
+    
+  }
+  
+  .next {
+    top: 50%;
+    right: 10px;
+  }
+  .rassrochka{
+    max-width: 360px;
+    max-height: 224px;
+    
+  }
+  #map{
+    height: 265px; ;
   }
   
 

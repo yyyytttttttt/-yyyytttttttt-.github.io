@@ -37,31 +37,28 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-ymaps.ready(init);
-function init(){
-    var myMap = new ymaps.Map("yandex-map", {
-        center: [55.819204, 37.964244], // Центр карты
-        zoom: 10
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+        center: [55.819204, 37.964244], // Координаты центра карты
+        zoom: 15 // Уровень масштаба
+    }, {
+        searchControlProvider: 'yandex#search'
+    }),
+
+    // Создание меток
+    myPlacemark1 = new ymaps.Placemark([55.819204, 37.964244], {
+        // Описание метки
+        hintContent: 'Улыбка Стоматологическая клиника ',
+        balloonContent: 'ЛУЧШАЯ'
+    }),
+
+    myPlacemark2 = new ymaps.Placemark([55.827399, 37.955604], {
+        // Описание метки
+        hintContent: 'Улыбка Стоматологическая клиника',
+        balloonContent: 'ЛУЧШАЯ'
     });
 
-    // Список координат для меток
-    var coords = [
-        [55.819204, 37.964244], // Красная площадь
-        [55.827399, 37.955604] // Кремль
-    ];
-
-    // Добавляем метки на карту
-    coords.forEach(function(location) {
-        var myPlacemark = new ymaps.Placemark(location, {
-            hintContent: 'Улыбка Стоматологическая клиника', // Здесь можно указать содержание подсказки
-            balloonContent: 'Улыбка Стоматологическая клиника ' + location.join(', ') // Содержание балуна
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-    });
-
-    // Опционально: Масштабировать карту так, чтобы были видны все метки
-    myMap.setBounds(myMap.geoObjects.getBounds(), {
-        checkZoomRange: true
-    });
-}
+    // Добавление меток на карту
+    myMap.geoObjects.add(myPlacemark1);
+    myMap.geoObjects.add(myPlacemark2);
+});
